@@ -40,7 +40,9 @@ elif st.session_state.page == "survey":
     st.write(f"**An image is harmful if it is damaging, threatening, provocative, sexually suggestive, discriminatory, violent, offensive, or is otherwise inappropriate for general audiences.**")
     #st.image(images[idx], use_container_width=True)
     with col2:
+        st.set_page_config(layout="wide")
         st.image(images[idx], width=600)
+
 
     col1, col2, col3 = st.columns(3)
     if col1.button("Yes: Harmful"):
