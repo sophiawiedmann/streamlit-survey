@@ -27,9 +27,10 @@ if st.session_state.page == "instructions":
     st.write("If the image is non-harmful, click 'No'.")
     st.write("If you are uncertain, click 'Unsure'. For example, if the image is confusing or you cannot understand its intentions.")
     st.write("MAKE SURE YOU DOWNLOAD YOUR .CSV RESULTS AT THE END!")
-if st.button("Start Survey"):
-    st.session_state.page = "survey"
-    st.rerun()
+    
+    if st.button("Start Survey"):
+        st.session_state.page = "survey"
+        st.rerun()
 
 # ---- Survey ----
 elif st.session_state.page == "survey":
