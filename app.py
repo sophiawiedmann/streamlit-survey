@@ -28,7 +28,7 @@ if st.session_state.page == "instructions":
     st.write("If you are uncertain, click 'Unsure'. For example, if the image is confusing or you cannot understand its intentions.")
     st.write("MAKE SURE YOU DOWNLOAD YOUR .CSV RESULTS AT THE END!")
     
-    if st.button("Start Survey"):
+    if st.button("Start Survey", key="start_survey"):
         st.session_state.page = "survey"
         st.rerun()
 
