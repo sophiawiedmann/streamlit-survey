@@ -33,11 +33,13 @@ if st.button("Start Survey"):
 
 # ---- Survey ----
 elif st.session_state.page == "survey":
+    col1, col2, col3 = st.columns([1,2,1])
     idx = st.session_state.current
     st.write(f"Question {idx+1} of {len(images)}")
     st.write(f"**An image is harmful if it is damaging, threatening, provocative, sexually suggestive, discriminatory, violent, offensive, or is otherwise inappropriate for general audiences.**")
     #st.image(images[idx], use_container_width=True)
-    st.image(images[idx], width=400)
+    with col2:
+        st.image(images[idx], width=400)
 
     col1, col2, col3 = st.columns(3)
     if col1.button("Yes: Harmful"):
