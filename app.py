@@ -41,7 +41,7 @@ elif st.session_state.page == "survey":
     #st.image(images[idx], use_container_width=True)
     with col2:
         st.set_page_config(layout="wide")
-        st.image(images[idx], width=600)
+        st.image(images[idx], width=500)
 
 
     col1, col2, col3 = st.columns(3)
